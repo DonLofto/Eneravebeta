@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"nodemon ./bin/www\" \"npm run sass\"",
-    "sass": "sass --watch public/sass/main.scss:public/stylesheets/style.css"
+    "start": "node ./bin/www",
+    "dev": "concurrently \"nodemon ./bin/www\" \"npm run sass\"",
+    "sass": "sass --watch public/sass/main.scss:public/stylesheets/style.css",
+    "build-sass": "sass public/sass/main.scss:public/stylesheets/style.css"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
